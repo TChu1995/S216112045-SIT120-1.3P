@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Contact</title>
+    <link rel="stylesheet" type="text/css" href="style_2.css" />
+  </head>
+  <body>
+    <div class="resume">
+      <header>
+        <h1>Tuan Chu - CV Detail</h1>
+      </header>
+      <div id="CV">
+        <div id="CV">
+          <h2 style="display: inline-block; margin-right: 10px;">Download CV</h2>
+          <button @click="userLoggedIn = !userLoggedIn" class="logInButton">Log In</button>
+        </div>
+        
+        <p>
+          <!-- Conditional rendering based on a boolean variable -->
+          <div v-if="userLoggedIn">
+            <h2>User Dashboard</h2>
+            <p>Welcome, User! You are logged in.</p>
+            <a href="Tuan Chu CV 2023.pdf">Download</a>
+          </div>
+          <div v-else>
+            <h2>Login Required</h2>
+            <p>Please log in to access PDF CV.</p>
+          </div>
+        </p>
+      </div>
+      <a href="/main_index.HTML" class="go-back-link"> GO BACK </a>
+
+      <script src="https://unpkg.com/vue@3.0.11/dist/vue.global.js"></script>
+      <script>
+        const { createApp, ref } = Vue;
+    
+        const app = createApp({
+          data() {
+            return {
+              userLoggedIn: false, // Simulate user login status
+            };
+          },
+        });
+    
+        app.mount("#CV");
+      </script>
+  </body>
+</html>

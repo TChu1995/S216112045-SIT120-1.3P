@@ -1,0 +1,217 @@
+/* Reset default styles */
+body {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  line-height: 1.6;
+  padding: 20px;
+  background-color: #f4f4f4;
+}
+#CV {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 5px;
+}
+/* Header styles */
+.header {
+  padding: 5px;
+}
+
+/* Layout styles */
+.left,
+.right {
+  float: left;
+  width: 20%;
+}
+.logInButton {
+  float: right;
+  font-size: 16px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.main {
+  float: left;
+  width: 75%;
+  margin: auto;
+  border: 1px solid #ddd;
+  padding: 20px;
+  background: #fff;
+  box-shadow: 0 0 10px #ddd;
+}
+
+/* Responsive layout using a media query */
+@media screen and (max-width: 800px) {
+  .left,
+  .main,
+  .right {
+    width: 100%;
+  }
+}
+
+/* "GO BACK" link styles */
+.go-back-link {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.go-back-link:hover {
+  background-color: #0056b3;
+}
+
+/* Resume container styles */
+.resume {
+  max-width: 800px;
+  margin: auto;
+  border: 1px solid #ddd;
+  padding: 20px;
+  background: #fff;
+  box-shadow: 0 0 10px #ddd;
+}
+
+/* Content styles */
+.content {
+  color: red;
+  font-size: xx-large;
+  font-style: italic;
+}
+
+/* Header styles */
+header {
+  text-align: center;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #ddd;
+}
+
+h1 {
+  margin: 0;
+}
+
+/* Subheader styles */
+h2 {
+  color: #777;
+  margin: 0;
+}
+
+/* Section styles */
+section {
+  margin-bottom: 20px;
+}
+
+/* Subsection header styles */
+h3 {
+  color: #333;
+}
+
+/* Unordered list styles */
+ul {
+  padding-left: 40px;
+}
+
+/* Main content container styles */
+.main_2 {
+  max-width: auto;
+  margin: auto;
+  border: 1px solid #ddd;
+  padding: 20px;
+  background: #fff;
+  box-shadow: 0 0 10px #ddd;
+}
+
+/* Table styles */
+#campus {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#campus td,
+#campus th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#campus tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+#campus tr:hover {
+  background-color: #ddd;
+}
+
+#campus th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #04aa6d;
+  color: white;
+}
+
+/* Link styles */
+a:link {
+  color: red;
+}
+
+a:visited {
+  color: green;
+}
+
+a:active {
+  color: blue;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 18px;
+  margin-right: 20px;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Generic container styles */
+.container {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+/* Project card styles */
+.project {
+  background-color: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin: 10px;
+  text-align: center;
+  transition: transform 0.2s ease-in-out;
+}
+
+.project:hover {
+  transform: translateY(-5px);
+}
+
+/* Heading styles */
+h3 {
+  margin: 10px 0;
+}
+
+/* Paragraph styles */
+p {
+  color: #555;
+  font-size: 16px;
+  margin: 10px 0;
+}

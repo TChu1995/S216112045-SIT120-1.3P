@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Contact</title>
+    <link rel="stylesheet" type="text/css" href="style_2.css" />
+    <link rel="script" type="text/js" href="task13p.js" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/vue@3.0.11/dist/vue.global.css"
+    />
+  </head>
+  <body>
+    <div class="resume">
+      <header class="header">
+        <h1>Tuan Chu - Contact Information</h1>
+      </header>
+
+      <div id="app">
+        <h2>Phone Number and Email Address:</h2>
+        <p v-for="item in user" :key="item.phone">
+          <span style="font-weight: bold">Phone:</span> {{ item.phone }}
+        </p>
+        <p v-for="item in user" :key="item.email">
+          <span style="font-weight: bold">Email:</span>
+          <a :href="'mailto:' + item.email">{{ item.email }}</a>
+        </p>
+        <p v-for="item in user" :key="item.address">
+          <span style="font-weight: bold">Address:</span> {{ item.address }}
+        </p>
+      </div>
+
+      <div id="your_detail">
+        <div>
+          <h2>Send Me A Message:</h2>
+          <p>
+            <span style="font-weight: bold">Your Number:</span>
+            <input
+              placeholder="Please Enter Your Number"
+              v-model="client_number"
+            />
+          </p>
+          <p>
+            <span style="font-weight: bold">Your Email:</span>
+            <input
+              placeholder="Please Enter Your Email"
+              v-model="client_email"
+            />
+          </p>
+        </div>
+
+        <div>
+          <h1>Custom Message:</h1>
+          <p id="send_message">
+            We've been impressed by your online portfolio and are interested in
+            potential collaborations. <br />
+            Please Reach Us At: <br />
+            Email: {{client_email}} <br />
+            Phone: {{client_number}} <br />
+            We'd love to discuss opportunities.
+          </p>
+          <button onclick="sendEmail()">Send</button>
+        </div>
+      </div>
+
+      <a href="/main_index.HTML" class="go-back-link">GO BACK</a>
+    </div>
+
+    <script src="https://unpkg.com/vue@3.0.11/dist/vue.global.js"></script>
+    <script type="text/javascript" src="task13p.js"></script>
+  </body>
+</html>

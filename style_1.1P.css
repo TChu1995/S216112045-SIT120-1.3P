@@ -1,0 +1,47 @@
+.main {
+  max-width: auto;
+  margin: auto;
+  border: 1px solid #ddd;
+  padding: 20px;
+  background: #fff;
+  box-shadow: 0 0 10px #ddd;
+}
+#campus {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  border-collapse: colapse;
+  width: 100%;
+}
+#campus td,
+#campus th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#campus tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+#campus tr:hover {
+  background-color: #ddd;
+}
+
+#campus th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #04aa6d;
+  color: white;
+}
+
+a:link {
+  color: red;
+}
+a:visited {
+  color: green;
+}
+a:hover {
+  color: pink;
+}
+a:active {
+  color: blue;
+}

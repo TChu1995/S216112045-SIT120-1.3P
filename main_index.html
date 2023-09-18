@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" type="text/css" href="style_2.css" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tuan Chu - Personal Portfolio</title>
+</head>
+
+<body>
+  <!-- Header Section -->
+  <div class="left">
+    <header>
+      <nav>
+        <ul>
+          <li><a href="\contact_detail.html">Contact</a></li>
+          <li><a href="\about_project.html">Projects</a></li>
+          <li><a href="\Download_cv.html">Download CV</a></li>
+        </ul>
+      </nav>
+    </header>
+  </div>
+  <div class="main">
+    <!-- About Me Section -->
+    <section id="about_me">
+      <h1>Tuan Chu</h1>
+      <h1>Back End Developer - Head Technician</h1>
+
+      <h2>About Me</h2>
+      <ul>
+        <li v-for="line in about">{{ line }}</li>
+      </ul>
+    </section>
+    <hr style="border: 1px solid #ccc; margin: 20px 0" />
+
+    <!-- Education Section -->
+    <section id="education">
+      <h2 style="margin-bottom: 10px">Education - Certification</h2>
+
+      <!-- University -->
+      <div v-for="item in deakin" style="margin-bottom: 20px">
+        <h3 style="font-size: 1.2em; font-weight: bold; margin-bottom: 5px">
+          {{ item.name }}
+        </h3>
+        <span>{{ item.course }} - {{ item.start }}</span>
+        <br />
+        <a href="./about_deakin.html" style="color: #007bff; text-decoration: none">Details</a>
+      </div>
+      <!-- Apple Ceritifaction -->
+      <div v-for="item in apple" style="margin-bottom: 20px">
+        <h3 style="font-size: 1.2em; font-weight: bold; margin-bottom: 5px">
+          {{ item.name }} - {{ item.start }}
+        </h3>
+        <a href="./about_apple.html" target="_blank" style="color: #007bff; text-decoration: none">Details</a>
+      </div>
+
+      <!-- College -->
+      <div v-for="item in keysborough" style="margin-bottom: 20px">
+        <h3 style="font-size: 1.2em; font-weight: bold; margin-bottom: 5px">
+          {{ item.name }} - ATAR: {{item.ATAR}}
+        </h3>
+        <span>{{ item.course }} : {{ item.start }} - {{item.end}}</span>
+        <br />
+        <a href="https://www6.keysboroughsc.vic.edu.au/" target="_blank"
+          style="color: #007bff; text-decoration: none">Details</a>
+      </div>
+    </section>
+
+    <!-- drawing seperating line -->
+
+    <hr style="border: 1px solid #ccc; margin: 20px 0" />
+
+    <!-- Projects Section -->
+    <section id="skills">
+      <h2>Expertise</h2>
+      <!-- Project 1 -->
+      <div>
+        <ul>
+          <li v-for="skill in skills">{{skill}}</li>
+        </ul>
+      </div>
+      <!-- drawing seperating line -->
+      <hr style="border: 1px solid #ccc; margin: 20px 0" />
+
+      <!-- Projects Section -->
+
+
+
+
+
+      <section id="projects">
+        <h2>My Coding Projects</h2>
+        <!-- Project 1 -->
+        <div class="project">
+          <p>
+            <!-- use the router-link component for navigation. -->
+            <router-link to="/">Online Price Scrapping</router-link><br>
+            <router-link to="/ProjectOne">JPEG Converter</router-link><br>
+            <router-link to="/ProjectTwo">Mini Game</router-link><br>
+
+            <!-- `<router-link>` will render an `<a>` tag with the correct `href` attribute -->
+
+          <div style="  border: 1px solid #ddd; text-align: center;">
+            <router-view></router-view>
+          </div>
+
+          <a href="/about_project.html" target="_blank" style="color: #007bff; text-decoration: none">View Details</a>
+        </div>
+        <!-- Project 2 (Add more projects as needed) -->
+      </section>
+
+      <!-- drawing seperating line -->
+      <hr style="border: 1px solid #ccc; margin: 20px 0" />
+
+      <section id="experiences">
+        <h2>Experiences</h2>
+        <!-- Project 1 -->
+        <div class="container">
+
+          <h2>PhoneCycle | Doncaster East VIC 3109</h2>
+          <p><strong>Position:</strong> Team Leader (2019 - Present)</p>
+          <p>Serve as team leader for the technical team since 2020.</p>
+          <p>Directly assist in developing and troubleshooting PhoneCycle's internal Mobile Diagnostic software. Create
+            additional buyback and sell channels.</p>
+          <p>Directly work with the director to expand, improve, and optimize business internal processes and
+            efficiency.</p>
+          <p>Responsible for maintaining e-commerce with a 100% positive feedback rating.</p>
+          <p>Provide continuing technical support for the director and the Account Manager team.</p>
+        </div>
+        <div class="container">
+          <h2>AMT Electronics | Melbourne VIC 3000</h2>
+          <p><strong>Position:</strong> Senior Computer/Phone Technician (2016-2019)</p>
+          <ul>
+            <li>Sales assistant: Assisted customers with product demonstrations and sales.</li>
+            <li>Phone/Computer Technician: Repaired hardware and software.</li>
+            <li>Placed orders and negotiated with suppliers.</li>
+            <li>Made calls for customer inquiries and provided assistance over the phone.</li>
+          </ul>
+        </div>
+      </section>
+      <!-- drawing seperating line -->
+      <hr style="border: 1px solid #ccc; margin: 20px 0" />
+
+      <!-- Contact Section -->
+      <section id="app">
+        <h2><a href="\contact_detail.html">Contact Me</a></h2>
+        <p>
+          <span style="font-weight: bold">Phone: </span>
+          <span v-for="item in user" :key="item.phone" style="display: inline">{{ item.phone }}</span>
+        </p>
+        <p>
+          <span style="font-weight: bold">Email: </span>
+          <a v-for="item in user" :key="item.email" href="mailto:tuananh.chu1995@gmail.com">{{ item.email }}</a>
+        </p>
+      </section>
+      <!-- Footer Section -->
+      <footer>
+        <p>&copy; 2023 Tuan CHU</p>
+      </footer>
+  </div>
+  
+<script src="https://unpkg.com/vue@3.0.11/dist/vue.global.js"></script>
+<script src="https://unpkg.com/vue-router@4"></script>
+<script src="task13p.js"></script>
+
+
+</body>
+</html>
